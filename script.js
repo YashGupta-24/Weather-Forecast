@@ -1,4 +1,4 @@
-const Date_URL = "http://worldtimeapi.org/api/timezone/Asia/Kolkata"; //API for time, date, week, etc
+const Date_URL = "https://worldtimeapi.org/api/timezone/Asia/Kolkata"; //API for time, date, week, etc
 let searchButton = document.querySelector('button'); //Search Button
 let temperature = document.querySelector("#temperature"); //Current temp of a particular location
 let date = document.querySelector('#date'); //Display current date
