@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex">
+    <main>
+        <!-- Left Block of the Window(Laptop) & Upper Block for Mobile -->
+        <div id="leftBlock">
+            <!-- Displaying current city and cureent date -->
+            <header class="flex">
+                <h2 id="city">City</h2>
+                <h2 id="date"></h2>
+            </header>
+            <!-- Displays the temperature in degree celcius, with the status -->
+            <hero id="dayWeather" class="flex">
+                <div class="flex">
+                    <h1 class="flex color" id="temperature">0
+                    </h1>
+                    <span id="degree" class="color"> &#176; C</span>
+                </div>
+                <div class="flex" id="tempStatus">
+                    <h3 id="Status"></h3>
+                    <h3 id="feels"></h3>
+                </div>
+            </hero>
+            <hr>
+            <!-- Search Section -->
+            <section id="searchWeather" class="flex">
+                <div id="search">
+                    <h4>Enter City</h4>
+                    <input type="text" value="Meerut">
+                </div>
+                <button>Search</button>
+            </section>
+        </div>
+        <!-- Right section in laptop and bottom in mobile -->
+        <aside class="flex">
+            <!-- Div to display time and status -->
+            <section id="message" class="flex">
+                <h2 id="Greeting" class="color"></h2>
+                <h2 id="time"></h2>
+                <h3 id="timeStatus"></h3>
+            </section>
+            <!-- Station Coordinates -->
+            <h2 class="Heading color">Station Coordinates</h2>
+            <section id="coordinates" class="flex">
+                <div class="box flex" >
+                    <h2>Latitude</h2>
+                    <h3 id="latitude" class="color"></h3>
+                </div>
+                <div class="box flex" >
+                    <h2>Longitude</h2>
+                    <h3 id="longitude" class="color"></h3>
+                </div>
+            </section>
+            <!-- Weather Details -->
+            <h2 class="Heading color">Weather Aspects</h2>
+            <section class="flex" id="details">
+                <div class="box flex">
+                    <h3>Humidity</h3>
+                    <h2 id="humidity" class="color"></h2>
+                </div>
+                <div class="box flex">
+                    <h3>Pressure</h3>
+                    <h2 id="pressure" class="color"></h2>
+                </div>
+                <div class="box flex">
+                    <h3>Wind</h3>
+                    <h2 id="wind" class="color"></h2>
+                </div>
+            </section>
+            <footer>
+                Made with 
+                <i class="fa-solid fa-code" style="color: #191913;"></i>
+                and 
+                <i class="fa-solid fa-heart" style="color: #191913;"></i>
+                by
+                <a href="https://www.linkedin.com/in/yash-gupta-b59877280"><span class="color">Yash Gupta</span></a>
+            </footer>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/85b90bcf74.js" crossorigin="anonymous"></script>
+</body>
+</html>

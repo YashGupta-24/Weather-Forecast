@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    height: 100vmin;
+    background-color: #d6ccc2;
+    flex-direction: column;
+}
+
+main{
+    height: 80vmin;
+    width: 90%;
+    border-radius: 40px;
+    background-color: #f5ebe0;
+    padding-left: 3vmin;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+header{
+    height: 8vmin;
+    margin-top: 4vmin;
+    justify-content: space-around!important;
+}
+
+h2{
+    font-size: 4vmin;
+}
+
+#dayWeather{
+    height: 45vmin;
+    margin-top: 1vmin;
+    margin-bottom: 2vmin;
+    flex-direction: column;
+    align-items: normal!important;
+}
+
+#temperature{
+    height: 30vmin;
+    margin: 2vmin;
+    font-size: 20vmin;
+    font-weight: lighter;
+    padding-bottom: 6vmin;
+}
+
+#degree{
+    font-size: 15vmin;
+}
+
+#tempStatus{
+    justify-content: space-evenly!important;
+    height: 5vmin;
+}
+
+#Status{
+    height: 5vmin;
+    text-align: center;
+    font-size: 3vmin;
+    width: 40%;
+}
+
+#feels{
+    height: 5vmin;
+    width: 40%;
+    text-align: center;
+    font-size: 3vmin;
+}
+
+hr{
+    width: 97%;
+}
+
+#searchWeather{
+    height: 13vmin;
+    margin-top: 2vmin;
+}
+
+#search{
+    margin: 3vmin;
+}
+
+#search h4{
+    font-size: 3vmin;
+    text-align: center;
+    margin-bottom: 1vmin;
+}
+
+#search input{
+    border: none;
+    outline: none;
+    height: 4vmin;
+    width: 30vmin;
+    font-size: 2.5vmin;
+    text-align: center;
+    border-radius: 3vmin;
+    font-weight: 800;
+}
+
+#searchWeather button{
+    height: 5vmin;
+    width: 17vmin;
+    cursor: pointer;
+    font-size: 3vmin;
+    border: none;
+    border-radius: 3vmin;
+    background-color: #d5bdaf;
+    font-weight: 900;
+}
+
+#searchWeather button:hover{
+    border: 2px solid rgb(63, 4, 14);
+}
+
+aside{
+    background-color: #e3d5ca;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    flex-direction: column;
+    justify-content: center!important;
+}
+
+#message{
+    flex-direction: column;
+    height: 15vmin;
+    margin-bottom: 3vmin;
+}
+
+#timeStatus{
+    font-size: 3vmin;
+}
+
+.Heading{
+    width: 100%;
+    background-color: #d6ccc2;
+    text-align: center;
+    padding: 1vmin;
+}
+
+#coordinates{
+    height: 15vmin;
+    width: 70%;
+    justify-content: space-around!important;
+}
+
+#coordinates div h3{
+    font-size: 3vmin;
+}
+
+.box{
+    height: 13vmin;
+    border-radius: 2vmin;
+    flex-direction: column;
+    width: 20vmin;
+}
+
+#details{
+    height: 15vmin;
+    width: 90%;
+    justify-content: space-evenly!important;
+}
+
+#details div h3{
+    font-size: 3vmin;
+}
+
+footer{
+    height: 6vmin;
+    font-size: 4vmin;
+    margin: 2vmin;
+    width: 90%;
+    text-align: center;
+}
+
+a{
+    color: #191913;
+    text-decoration: none;
+}
+
+a span{
+    font-weight: 700;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color{
+    color: #4D0000;
+}
+
+@media screen and (max-width:785px){
+    body{
+        height: 162vmin;
+    }
+    main{
+        grid-template-columns: repeat(1,auto);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: -70vmin;
+    }
+    aside{
+        margin-top: 4.5vmin;
+        border-top-right-radius: 0;
+        margin-left: -3vmin;
+        border-bottom-left-radius: 40px;
+    }
+    footer{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:300px){
+    body{
+        height: 200vmin;
+    }
+    #search input{
+        height: 5vmin;
+        font-size: 3vmin;
+    }
+}
+
+@media screen and (max-width:230px){
+    body{
+        height: 250vmin;
+    }
+}
+
+@media screen and (max-width:877px){
+    footer{
+        font-size: 3vmin;
+    }
+}
