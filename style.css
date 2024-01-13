@@ -260,12 +260,17 @@ a span{
     }
 
     #tempStatus{
-        height: 10vmin;
+        height: 15vmin;
+    }
+    
+    #tempStatus h3{
+        height: 12vmin;
+        font-size: 4vmin;
+        width: 40%;
     }
 
-    #tempStatus h3{
-        font-size: 5vmin;
-        width: 50%;
+    hr{
+        width: 100%;
     }
 
     #searchWeather{
