@@ -8,7 +8,7 @@
 }
 
 body{
-    height: 100vmin;
+    height: auto;
     background-color: #d6ccc2;
     flex-direction: column;
 }
@@ -21,6 +21,8 @@ main{
     padding-left: 3vmin;
     display: grid;
     grid-template-columns: repeat(2,auto);
+    margin-top: 10vmin;
+    margin-bottom: 10vmin;
 }
 
 header{
@@ -198,7 +200,7 @@ a span{
 
 @media screen and (max-width:785px){
     body{
-        height: 162vmin;
+        height: 172vmin;
     }
     main{
         grid-template-columns: repeat(1,auto);
@@ -217,19 +219,129 @@ a span{
     }
 }
 
-@media screen and (max-width:300px){
+@media screen and (max-width:360px){
     body{
-        height: 200vmin;
-    }
-    #search input{
-        height: 5vmin;
-        font-size: 3vmin;
-    }
-}
-
-@media screen and (max-width:230px){
-    body{
+        /* height: 250vmin; */
         height: 250vmin;
+    }
+    main{
+        padding-left: 0;
+        padding-top: 10vmin;
+        margin-top: -135vmin;
+    }
+
+    #leftBlock{
+        height: 100vmin;
+        background-color: #f5ebe0;
+        margin-left: 0;
+        border-top-right-radius: 10vmin;
+        border-top-left-radius: 10vmin;
+    }
+
+    header{
+        height: 12vmin;
+    }
+
+    header h2{
+        font-size: 7vmin;
+    }
+
+    #dayWeather{
+        height: 50vmin;
+        margin-top: 3vmin;
+    }
+    #dayWeather>div{
+        margin-bottom: 5vmin;
+
+    }
+
+    #temperature{
+        font-size: 35vmin;
+    }
+
+    #tempStatus{
+        height: 10vmin;
+    }
+
+    #tempStatus h3{
+        font-size: 5vmin;
+        width: 50%;
+    }
+
+    #searchWeather{
+        height: 25vmin;
+    }
+
+    #search h4{
+        font-size: 6vmin;
+    }
+
+    #search input{
+        height: 7vmin;
+        font-size: 4.3vmin;
+    }
+
+    #searchWeather button{
+        height: 10vmin;
+        width: 25vmin;
+        font-size: 5vmin;
+    }
+
+    aside{
+        margin-left: 0;
+    }
+
+    #message{
+        height: 27vmin;
+
+    }
+
+    #Greeting, #time{
+        font-size: 7vmin;
+    }
+
+    #timeStatus{
+        font-size: 5vmin;
+    }
+
+    .Heading{
+        font-size: 6vmin;
+    }
+
+    #coordinates{
+        height: 25vmin;
+        width: 90%;
+    }
+
+    #coordinates div{
+        height: 20vmin;
+        width: 40%;
+    }
+
+    #coordinates>div>h2{
+        font-size: 6.5vmin;
+    }
+
+    #coordinates>div>h3{
+        font-size: 5vmin;
+    }
+
+    #details{
+        height: 25vmin;
+        width: 100%;
+    }
+
+    #details div{
+        height: 20vmin;
+        width: 30%;
+    }
+
+    #details>div>h3{
+        font-size: 5.6vmin;
+    }
+
+    #details>div>h2{
+        font-size: 5vmin;
     }
 }
 
