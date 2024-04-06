@@ -34,10 +34,10 @@ const temp = async (inputCity) => {
 
     //Checking if the entered name is of a correct station or not
     if (data.cod != "404") {
-        temperature.innerText = toCelcius(data.main.temp);
+        temperature.innerText = toCelsius(data.main.temp);
         cityDisplay.innerText = inputCity;
         Status.innerText=data.weather[0].description.toUpperCase(); 
-        feels.innerText=`feels like: ${toCelcius(data.main.feels_like)}`;
+        feels.innerText=`feels like: ${toCelsius(data.main.feels_like)}`;
         latitude.innerText=data.coord.lat;
         longitude.innerText=data.coord.lon;
         humidity.innerText=`${data.main.humidity} %`;
@@ -50,8 +50,8 @@ const temp = async (inputCity) => {
     }
 }
 
-//Function to convert farenheit to degree celcius
-const toCelcius = (temp) => {
+//Function to convert fahrenheit to degree celsius
+const toCelsius = (temp) => {
     return ((temp - 273).toFixed(1));
 }
 
@@ -66,7 +66,7 @@ const reset=()=>{
     windSpeed.innerText="";
 }
 
-// IEEE function to run without being called, and change the time and date continously
+// IEEE function to run without being called, and change the time and date continuously
 (async () => {
     for (let index = 0; ; index++) {
         if (index % 60 == 0) {
