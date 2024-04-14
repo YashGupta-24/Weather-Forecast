@@ -5,7 +5,6 @@ let date = document.querySelector('#date'); //Display current date
 let cityDisplay = document.querySelector('#city'); //Display the searched city
 let time = document.querySelector('#time'); //Display current time
 let greeting = document.querySelector('#Greeting'); //Display Greeting (Good morning...)
-let timeStatus = document.querySelector('#timeStatus'); //AM or PM
 let Status=document.querySelector("#Status"); //Displaying the status of temperature
 let feels=document.querySelector('#feels'); //Displaying feels like temperature
 let latitude=document.querySelector("#latitude"); //Display latitude of current location
@@ -66,30 +65,21 @@ const reset=()=>{
     windSpeed.innerText="";
 }
 
-// IEEE function to run without being called, and change the time and date continuously
-(async () => {
-    for (let index = 0; ; index++) {
-        if (index % 60 == 0) {
-            response = await fetch(Date_URL);
-            data = await response.json();
-
-            //Changing the date every 24 hours
-            if (date.innerText != data.datetime.substring(0, 10).split("-").reverse().join("-"))
-                date.innerText = data.datetime.substring(0, 10).split("-").reverse().join("-");
-
-            time.innerText = data.datetime.substring(11, 16); //Changing time per minute
-
-            greet(data.datetime.substring(11, 13)); //Checks to change the greeting as per hour  
-        }
+setInterval(()=>{
+    let dateData=new Date();
+    time.innerHTML=dateData.toLocaleTimeString();
+    if(date.innerText!=dateData.toLocaleDateString()){
+        date.innerHTML=dateData.toLocaleDateString();
+        greet(dateData.getHours());
     }
-})();
+},1000);
 
 //Function to change the greeting and timeStatus(i.e. AM/PM)
 const greet = (hour) => {
-    if (hour >= '04' && hour <= '12') {
+    if (hour >= '04' && hour < '12') {
         greeting.innerText = "Good Morning";
     }
-    else if (hour>='13' && hour <= '16') {
+    else if (hour>='12' && hour <= '16') {
         greeting.innerText = "Good Afternoon";
     }
     else if (hour >='17' && hour <= '20') {
@@ -97,12 +87,5 @@ const greet = (hour) => {
     }
     else {
         greeting.innerText = "Good Night";
-    }
-
-    if (hour >= 0 && hour <= 12) {
-        timeStatus.innerText = "AM";
-    }
-    else {
-        timeStatus.innerText = "PM";
     }
 }
